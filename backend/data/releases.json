@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": "...",
+    "service": "customer-api",
+    "environment": "staging",
+    "status": "success",
+    "confidence": 8,
+    "notes": "Smoke tests passed",
+    "createdAt": "2026-06-06T..."
+  }
+]

@@ -23,7 +23,22 @@ function saveReleases(releases) {
 }
 
 router.get("/", (req, res) => {
-  const releases = loadReleases();
+  let releases = loadReleases();
+
+  const environment = req.query.environment;
+  const status = req.query.status;
+
+  if (environment) {
+    releases = releases.filter(
+      release => release.environment === environment
+    );
+  }
+
+  if (status) {
+    releases = releases.filter(
+      release => release.status === status
+    );
+  }
 
   releases.sort(
     (a, b) =>
