@@ -24,3 +24,19 @@ The project allows engineering teams to record deployment outcomes, release conf
 - Explore Serverless Architecture
 - Build CI/CD Pipelines
 - Gain hands-on AWS experience
+
+## Architecture
+
+```mermaid
+flowchart TD
+
+    A[Client] --> B[Release Pulse API]
+
+    B --> C[(JSON Storage)]
+
+    D[Future AWS Architecture]
+
+    D --> E[API Gateway]
+    E --> F[AWS Lambda]
+    F --> G[(DynamoDB)]
+```
