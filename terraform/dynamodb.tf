@@ -1,0 +1,1 @@
+# DynamoDB resources will be added here
