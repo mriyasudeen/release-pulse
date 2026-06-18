@@ -1,4 +1,5 @@
 resource "aws_dynamodb_table" "release_pulse" {
+
   name         = "release-pulse"
   billing_mode = "PAY_PER_REQUEST"
 
@@ -7,5 +8,10 @@ resource "aws_dynamodb_table" "release_pulse" {
   attribute {
     name = "id"
     type = "S"
+  }
+
+  tags = {
+    Project = "release-pulse"
+    Owner   = "mriyasudeen"
   }
 }
